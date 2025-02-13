@@ -54,7 +54,11 @@ export default function App() {
   return (
     <Container>
       <h1>Message App</h1>
-      <Form>
+      <Form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <Form.Group className="row mb-3" controlId="message">
           <Form.Label className="col-3 col-offset-9" s>
             Message
